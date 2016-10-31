@@ -3,5 +3,9 @@
 ################################################################################
 
 /.vs
-/src/prometheus-net/bin/Debug/netstandard1.6
-/src/prometheus-net/obj/Debug/netstandard1.6
+/src/prometheus-net/bin
+/src/prometheus-net/obj
+/test/prometheus-net.tests/project.lock.json
+/test/prometheus-net.tests/prometheus-net.tests.xproj.user
+/test/prometheus-net.tests/bin
+/test/prometheus-net.tests/obj
