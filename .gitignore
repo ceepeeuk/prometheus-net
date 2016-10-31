@@ -3,9 +3,13 @@
 ################################################################################
 
 /.vs
-/src/prometheus-net/bin
-/src/prometheus-net/obj
-/test/prometheus-net.tests/project.lock.json
-/test/prometheus-net.tests/prometheus-net.tests.xproj.user
-/test/prometheus-net.tests/bin
-/test/prometheus-net.tests/obj
+/src/prometheus-net-core/bin
+/src/prometheus-net-core/obj
+/src/prometheus-net-core/project.lock.json
+/src/prometheus-net-core/prometheus-net-core.xproj.user
+
+/test/prometheus-net-core.tests/project.lock.json
+/test/prometheus-net-core.tests/prometheus-net.tests.xproj.user
+/test/prometheus-net-core.tests/bin
+/test/prometheus-net-core.tests/obj
+/test/prometheus-net-core.tests/prometheus-net-core.tests.xproj.user

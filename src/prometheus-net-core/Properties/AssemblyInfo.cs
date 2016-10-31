@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("prometheus_net.tests")]
+[assembly: AssemblyProduct("prometheus_net_core")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d2bce62e-38ce-4e15-8f6b-a0beb6921746")]
+[assembly: Guid("EEBFA7A3-EE73-46D3-8482-6B2C9FEAD775")]
