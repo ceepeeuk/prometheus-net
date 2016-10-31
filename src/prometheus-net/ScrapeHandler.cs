@@ -27,6 +27,20 @@ namespace Prometheus
             }
         }
 
+	    public static string ProcessScrapeRequest(
+			IEnumerable<Advanced.DataContracts.MetricFamily> collected,
+		    string contentType)
+	    {
+		    if (contentType == ProtoContentType)
+		    {
+			    throw new NotImplementedException();
+		    }
+		    else
+		    {
+			    return AsciiFormatter.Format(collected);
+		    }
+	    }
+
         public static string GetContentType(IEnumerable<string> acceptHeaders)
         {
             return ProtobufAccepted(acceptHeaders) ? ProtoContentType : TextContentType;

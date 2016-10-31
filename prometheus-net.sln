@@ -1,13 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prometheus-net", "prometheus-net\prometheus-net.csproj", "{EE3B50BE-577B-4664-A347-CC737B7D5612}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D994EEE1-3786-4FDF-8A49-76D8B9819A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tester", "tester\tester.csproj", "{C0212A44-AE68-4315-BC20-3B8BB40A3F98}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4AF762EE-AC2C-481B-8D03-2AC5234E8723}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prometheus-net.tests", "prometheus-net.tests\prometheus-net.tests.csproj", "{276D072F-BC78-4B4F-988C-CF2B82F65603}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "prometheus-net", "src\prometheus-net\prometheus-net.xproj", "{DA92A2DC-4E33-4450-9866-FF0515F1EF53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +18,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE3B50BE-577B-4664-A347-CC737B7D5612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE3B50BE-577B-4664-A347-CC737B7D5612}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE3B50BE-577B-4664-A347-CC737B7D5612}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE3B50BE-577B-4664-A347-CC737B7D5612}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0212A44-AE68-4315-BC20-3B8BB40A3F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0212A44-AE68-4315-BC20-3B8BB40A3F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0212A44-AE68-4315-BC20-3B8BB40A3F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0212A44-AE68-4315-BC20-3B8BB40A3F98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{276D072F-BC78-4B4F-988C-CF2B82F65603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{276D072F-BC78-4B4F-988C-CF2B82F65603}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{276D072F-BC78-4B4F-988C-CF2B82F65603}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{276D072F-BC78-4B4F-988C-CF2B82F65603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA92A2DC-4E33-4450-9866-FF0515F1EF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA92A2DC-4E33-4450-9866-FF0515F1EF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA92A2DC-4E33-4450-9866-FF0515F1EF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA92A2DC-4E33-4450-9866-FF0515F1EF53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA92A2DC-4E33-4450-9866-FF0515F1EF53} = {D994EEE1-3786-4FDF-8A49-76D8B9819A29}
 	EndGlobalSection
 EndGlobal
