@@ -5,11 +5,11 @@ using Prometheus.Advanced.DataContracts;
 
 namespace Prometheus.Internal
 {
-    internal class LabelValues
+	public class LabelValues
     {
         private readonly string[] _values;
-        internal readonly List<LabelPair> WireLabels = new List<LabelPair>(); 
-        internal static readonly LabelValues Empty = new LabelValues(new string[0], new string[0]);
+        internal readonly List<LabelPair> WireLabels = new List<LabelPair>();
+	    public static readonly LabelValues Empty = new LabelValues(new string[0], new string[0]);
 
 
         public LabelValues(string[] names, string[] values)

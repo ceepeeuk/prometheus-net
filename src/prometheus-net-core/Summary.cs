@@ -40,7 +40,7 @@ namespace Prometheus
         readonly int _ageBuckets;
         readonly int _bufCap;
 
-        internal Summary(
+	    public Summary(
             string name, 
             string help, 
             string[] labelNames, 
@@ -125,7 +125,7 @@ namespace Prometheus
                 Init(parent, labelValues, DateTime.UtcNow);
             }
 
-            internal void Init(ICollector parent, LabelValues labelValues, DateTime now)
+            public void Init(ICollector parent, LabelValues labelValues, DateTime now)
             {
                 base.Init(parent, labelValues);
 
@@ -172,7 +172,7 @@ namespace Prometheus
                 Populate(metric, DateTime.UtcNow);
             }
 
-            internal void Populate(Metric metric, DateTime now)
+            public void Populate(Metric metric, DateTime now)
             {
                 var summary = new Advanced.DataContracts.Summary();
                 var quantiles = new Quantile[_objectives.Count];
@@ -220,7 +220,7 @@ namespace Prometheus
             /// <summary>
             /// For unit tests only
             /// </summary>
-            internal void Observe(double val, DateTime now)
+            public void Observe(double val, DateTime now)
             {
                 lock (_bufLock)
                 {

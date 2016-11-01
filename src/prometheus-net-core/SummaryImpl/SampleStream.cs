@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Prometheus.SummaryImpl
 {
-    class SampleStream
+	public class SampleStream
     {
         public double N;
         readonly List<Sample> _samples = new List<Sample>();

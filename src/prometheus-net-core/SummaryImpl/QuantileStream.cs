@@ -19,9 +19,9 @@ namespace Prometheus.SummaryImpl
     //
     // http://www.cs.rutgers.edu/~muthu/bquant.pdf
 
-    delegate double Invariant(SampleStream stream, double r);
+	public delegate double Invariant(SampleStream stream, double r);
 
-    class QuantileStream
+	public class QuantileStream
     {
         readonly SampleStream _sampleStream;
         readonly List<Sample> _samples;

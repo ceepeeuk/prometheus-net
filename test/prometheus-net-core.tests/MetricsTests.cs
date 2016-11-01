@@ -6,7 +6,7 @@ using Xunit;
 using System.Linq;
 using Histogram = Prometheus.Histogram;
 
-namespace prometheus_net.tests
+namespace Prometheus.Tests
 {
 	public class MetricsTests
 	{
