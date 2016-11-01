@@ -15,7 +15,7 @@ using Prometheus.Advanced;
 
 namespace ReferenceFileService.Controllers
 {
-	[Route("v1/[controller]")]
+	[Route("api/[controller]")]
 	public class MetricsController: Controller
     {
 		[HttpGet]
@@ -32,7 +32,7 @@ namespace ReferenceFileService.Controllers
 }
 
 ```
-It's tested on dotnet core netstandard1.6.
+Tested on dotnet core netstandard1.6.
 
 See prometheus [here](http://prometheus.io/)
 
