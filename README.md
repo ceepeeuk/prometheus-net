@@ -1,20 +1,42 @@
 # Prometheus .NET Client
 
-[![Build Status](https://travis-ci.org/andrasm/prometheus-net.svg?branch=master)](https://travis-ci.org/andrasm/prometheus-net)
+This is an experimental dot net core version (unofficial).
 
-This is an experimental dot net core version (unofficial)
+Its a fork of [MihaMarkic's](https://github.com/MihaMarkic/prometheus-net) fork of prometheus-net, updated to work with dotnet core and xunit.
 
-It's tested on Windows/.NET4 and Ubuntu/Mono 3.12.1.
+I have removed completely the MetricServer and suggest use of a /metrics controller, containing code such as:
+
+```csharp
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Prometheus;
+using Prometheus.Advanced;
+
+namespace ReferenceFileService.Controllers
+{
+	[Route("v1/[controller]")]
+	public class MetricsController: Controller
+    {
+		[HttpGet]
+		public IActionResult Get()
+		{
+			var registry = DefaultCollectorRegistry.Instance;
+			var acceptHeaders = Request.Headers["Accept"];
+			var contentType = ScrapeHandler.GetContentType(acceptHeaders);
+			Response.ContentType = contentType;
+			var s = ScrapeHandler.ProcessScrapeRequest(registry.CollectAll(), contentType);
+			return new OkObjectResult(s);
+		}
+    }
+}
+
+```
+It's tested on dotnet core netstandard1.6.
 
 See prometheus [here](http://prometheus.io/)
 
-## Installation
-
-Nuget package: [prometheus-net](https://www.nuget.org/packages/prometheus-net)
-
->Install-Package prometheus-net
-
-
+# Installation
 
 ## Instrumenting
 
