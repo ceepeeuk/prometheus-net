@@ -13,7 +13,7 @@ namespace Prometheus.Internal
         public static void Format(Stream destination, IEnumerable<MetricFamily> metrics)
         {
             var metricFamilys = metrics.ToArray();
-            using (var streamWriter = new StreamWriter(destination, Encoding.UTF8))
+            using (var streamWriter = new StreamWriter(destination, new UTF8Encoding(false)))
             {
                 streamWriter.NewLine = "\n";
                 foreach (var metricFamily in metricFamilys)
